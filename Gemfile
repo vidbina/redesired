@@ -3,8 +3,14 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.5'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development, :test do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -47,5 +53,5 @@ end
 gem 'spree', '2.2.2'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-2-stable'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-2-stable'
-gem 'spree_fancy', :git => 'https://github.com/spree/spree_fancy.git', :branch => '2-2-stable' 
-gem 'spree_redesired_theme', path: '../spree_redesired_theme'
+gem 'spree_redesired_theme', git: 'https://github.com/vidbina/spree_seniorita_theme.git', branch: 'dev'
+#gem 'spree_redesired_theme', path: '../spree_redesired_theme'
